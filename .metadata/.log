@@ -1,0 +1,13 @@
+!SESSION 2026-04-09 16:45:18.488 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Microsoft
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/anthonysantana/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/anthonysantana/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2026-04-09 16:45:19.594
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-04-09 16:45:35.402
+!MESSAGE Logback config file: /Users/anthonysantana/Desktop/estudos/saude/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
