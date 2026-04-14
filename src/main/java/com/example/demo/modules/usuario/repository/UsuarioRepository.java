@@ -13,8 +13,10 @@ public interface UsuarioRepository extends JpaRepository<UsuarioModel, Integer> 
 
     Optional<UsuarioModel> findById(Integer id);
 
-    Optional<UsuarioModel> findByClinica(ClinicaModel clinica);
+    List<UsuarioModel> findByClinica_Id(Integer clinicaId);
 
-    Optional<UsuarioModel> findByNome(String nome);
+    List<UsuarioModel> findByNomeContainingIgnoreCase(String nome);
+
+    Optional<UsuarioModel> findByLogin(String login);
 
 }

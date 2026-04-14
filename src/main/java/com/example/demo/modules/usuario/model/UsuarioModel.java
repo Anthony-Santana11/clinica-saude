@@ -3,11 +3,14 @@ package com.example.demo.modules.usuario.model;
 import com.example.demo.modules.clinica.model.ClinicaModel;
 import com.example.demo.modules.usuario.utils.roles.RoleEnum;
 import jakarta.persistence.*;
+import org.springframework.context.annotation.Role;
 
 @Entity
+@Table(name = "tbl_usuario")
 public class UsuarioModel {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @Column(name = "id_usuario", nullable = false)
     private Integer id;
     @Column(name ="nome" ,nullable = false, unique = true)
     private String nome;
@@ -21,7 +24,8 @@ public class UsuarioModel {
     private String especialidade;
 
     @Column(name = "role", nullable = false, columnDefinition = "ENUM('dono', 'funcionario')")
-    private RoleEnum role;
+    @Enumerated(EnumType.STRING)
+    private RoleEnum role = RoleEnum.funcionario;
 
     @ManyToOne
     @JoinColumn(name = "id_clinica", nullable = false)
@@ -81,5 +85,13 @@ public class UsuarioModel {
 
     public void setRole(RoleEnum role) {
         this.role = role;
+    }
+
+    public ClinicaModel getClinica() {
+        return clinica;
+    }
+
+    public void setClinica(ClinicaModel clinica) {
+        this.clinica = clinica;
     }
 }
